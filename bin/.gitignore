@@ -1,9 +1,7 @@
-/Accessories.class
-/Hair.class
+/Inventory.class
 /Payment.class
 /PosTerminal.class
 /PosTerminalApp.class
 /Product.class
-/Tech.class
 /posInterface.class
-/Inventory.class
+/ProductInventory.class
