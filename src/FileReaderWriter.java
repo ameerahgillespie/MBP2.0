@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileReaderWriter {
@@ -33,19 +34,26 @@ public class FileReaderWriter {
 		}
 		scan.close();
 	}
-	
 	public static void fileReader() {
+		ArrayList<Product> productsList = null;
 		try {
 			String line;
 			BufferedReader in = new BufferedReader(
-								new FileReader(productsFile));
+					new FileReader(productsFile));
 			do {
 				line = in.readLine();
+				productsList = new ArrayList<Product>();
 				System.out.println(line);
 			} while (line != null);
+			Product product = new Product(line);
+			productsList.add(product);
 			in.close();
 		} catch (IOException e) {
 			System.out.println(e);
 		}
+		
+//		for (Product product : productsList ) {
+//			System.out.println(product + "this is the arraylist");
+//		}
 	}
 }
