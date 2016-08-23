@@ -24,7 +24,6 @@ public class Product {
 		this.description = description;
 	}
 
-
 	public void setCategory(String category) {
 		this.category = category;
 	}
