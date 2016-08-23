@@ -1,0 +1,9 @@
+Laptop
+Desktop
+Phone
+Camera
+Hard Disk Drive
+Solid State Hard Drive
+Keyboard
+Mouse
+Battery Charger

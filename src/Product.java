@@ -20,6 +20,10 @@ public class Product {
         this.price = price;
     }
 
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	public void setCategory(String category) {
 		this.category = category;
 	}
@@ -42,4 +46,9 @@ public class Product {
         
         return ret;
     }
+
+	public String getName() {
+		// TODO Auto-generated method stub
+		return name;
+	}
 }
