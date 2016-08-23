@@ -1,4 +1,5 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PosTerminalApp extends FileReaderWriter {
@@ -9,7 +10,7 @@ public class PosTerminalApp extends FileReaderWriter {
 	
 		//Welcome! Who do I have the pleasure 
 		//print inventory
-		System.out.println(inventory);
+	//	System.out.println(inventory);
 		//We want it to ask the user to pick an item
 		System.out.println("Please select your item of choice.");
 		//Then we want the user to enter the item they picked
@@ -26,7 +27,13 @@ public class PosTerminalApp extends FileReaderWriter {
 				//if cash pull from cash
 		//if check pull from check
 		//if credit pull from credit
-		Payment.paymentType(scanstuffanswer);
+		ArrayList<Double> cart = new ArrayList<Double>();
+		cart.add(4.0);
+		cart.add(6.0);
+		cart.add(3.30);
+		System.out.println(Checkout.cartTotal(cart));
+		//Payment.paymentType(scanAnswer); <<<<<DO NOT REMOVE
+		
 		//Tell them their items will arrive in 4-7 business days (more like 7).
 		System.out.println("bye felicia.");
 		//Tell them thanks for shopping and come again!
