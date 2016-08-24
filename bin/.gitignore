@@ -1,1 +1,12 @@
 bin/
+/CashPayment.class
+/FileReaderWriter.class
+/Inventory.class
+/PosTerminal.class
+/Product.class
+/posInterface.class
+/CheckPayment.class
+/Checkout.class
+/CreditCardPayment.class
+/Payment.class
+/PosTerminalApp.class
