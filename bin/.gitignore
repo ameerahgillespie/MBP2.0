@@ -1,1 +1,4 @@
 bin/
+/CashPayment.class
+/CheckPayment.class
+/CreditCardPayment.class
