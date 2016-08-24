@@ -1,20 +1,21 @@
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class switchfobrainz {
+public class switchfobrainz extends Inventory{
 
 	public static BigDecimal getCart(int choice){
 		Scanner scan = new Scanner(System.in);
 		boolean finished = true;
 		String shopMore;
+		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		System.out.println(productList(0));
 		do{
 		//print inventory here	
 		int itemSelect = scan.nextInt();
 		scan.nextLine(); //garbage shoot
 		
-		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
 		
-		BigDecimal item1 = new BigDecimal(10);
 		BigDecimal item2 = new BigDecimal(15);
 		BigDecimal item3 = new BigDecimal(4);
 		BigDecimal item4 = new BigDecimal(11);
@@ -74,5 +75,10 @@ public class switchfobrainz {
 		}while(finished);
 		
 		return null;
+	}
+
+	public switchfobrainz() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 }

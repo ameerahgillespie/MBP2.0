@@ -48,9 +48,7 @@ public class PosTerminalApp {
 		System.out.println(Checkout.cartTax(cart));
 		System.out.println(Checkout.cartTotal(cart));	
 		// vvv print array contents vvv
-		for (BigDecimal number : cart) {
-			   System.out.println("Number = " + number);
-			   }
+		
 			//Payment.paymentType(scanstuffanswer);
 		
 //		System.out.println(Checkout.cartTotal(cart));
@@ -58,9 +56,11 @@ public class PosTerminalApp {
 		
 		
 		//Tell them their items will arrive in 4-7 business days (more like 7).
+		Checkout.printReceipt(cart);
 		System.out.println("bye felicia.");
 		//Tell them thanks for shopping and come again!
 		switchfobrainz.getCart(3);
+		
 		scan.close();
 	}
 
