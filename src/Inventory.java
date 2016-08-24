@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class Inventory extends FileReaderWriter{
 
@@ -14,17 +14,17 @@ public class Inventory extends FileReaderWriter{
 			BufferedReader in = new BufferedReader(
 									new FileReader(productsFile));
 			productList = new ArrayList<Product>();
-			String line = in.readLine();
+			String line;
 			
-			while(line != null){
-				line = in.readLine();
+			while((line = in.readLine()) != null){
+//				line = in.readLine();
 				Product product = new Product(line);
 				productList.add(product);
 //				System.out.println(line + " this is the array list");
 
 
 			}
-
+			in.close();
 		} catch (FileNotFoundException e) {
 			// TODO: handle exception
 			System.out.println("Error \t%s" + e);
