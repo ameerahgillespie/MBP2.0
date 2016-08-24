@@ -60,7 +60,7 @@ public class PosTerminalApp {
 		//Tell them their items will arrive in 4-7 business days (more like 7).
 		System.out.println("bye felicia.");
 		//Tell them thanks for shopping and come again!
-		switchfobrainz.getCart(3);
+//		switchfobrainz.getCart(3);
 		scan.close();
 	}
 

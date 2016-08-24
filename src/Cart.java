@@ -1,9 +1,15 @@
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
-public class switchfobrainz {
+public class Cart extends Inventory {
 
-	public static BigDecimal getCart(int choice){
+	public Cart() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public static Cart getCart(int choice){
 		Scanner scan = new Scanner(System.in);
 		boolean finished = true;
 		String shopMore;
@@ -12,16 +18,16 @@ public class switchfobrainz {
 		int itemSelect = scan.nextInt();
 		scan.nextLine(); //garbage shoot
 		
-		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		ArrayList<Product> cart = new ArrayList<Product>();
 		
-		BigDecimal item1 = new BigDecimal(10);
+		BigDecimal item1 = new BigDecimal(20);
 		BigDecimal item2 = new BigDecimal(15);
 		BigDecimal item3 = new BigDecimal(4);
 		BigDecimal item4 = new BigDecimal(11);
 
 		switch(itemSelect){
 		case 1:
-			cart.add(item1);
+			cart.add(productList.get(1));
 			
 			System.out.println("Good choice. Anything else? (yes/no)");
 			shopMore = scan.nextLine();
@@ -33,7 +39,7 @@ public class switchfobrainz {
 			}
 			break;
 		case 2:
-			cart.add(item2);
+			cart.add(productList.get(2));
 			
 			System.out.println("Good choice. Anything else? (yes/no)");
 			shopMore = scan.nextLine();
@@ -45,7 +51,7 @@ public class switchfobrainz {
 			}
 			break;
 		case 3:
-			cart.add(item3);
+			cart.add(productList.get(3));
 			
 			System.out.println("Good choice. Anything else? (yes/no)");
 			shopMore = scan.nextLine();
@@ -57,7 +63,7 @@ public class switchfobrainz {
 			}
 			break;
 		case 4:
-			cart.add(item4);
+			cart.add(productList.get(4));
 			System.out.println("Good choice. Anything else? (yes/no)");
 			shopMore = scan.nextLine();
 			if (shopMore.equalsIgnoreCase("yes")||shopMore.equalsIgnoreCase("y")){

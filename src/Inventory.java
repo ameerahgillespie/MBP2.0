@@ -47,8 +47,6 @@ public class Inventory extends FileReaderWriter{
 	}
 
 	public String toString() {
-		String ret = "";
-
 		String formattedString = "";
 		for (int x = 0; x < productList.size(); x++) {
 			Product currentProduct = productList.get(x);
