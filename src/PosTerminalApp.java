@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class PosTerminalApp extends FileReaderWriter {
 	public static void main(String[] args) {
+		fileReader();
 		Scanner scan = new Scanner (System.in);
 		Inventory inventory = new Inventory();
 
@@ -26,7 +27,7 @@ public class PosTerminalApp extends FileReaderWriter {
 				//if cash pull from cash
 		//if check pull from check
 		//if credit pull from credit
-		Payment.paymentType(scanstuffanswer);
+	//	Payment.paymentType(scanstuffanswer);
 		//Tell them their items will arrive in 4-7 business days (more like 7).
 		System.out.println("bye felicia.");
 		//Tell them thanks for shopping and come again!
