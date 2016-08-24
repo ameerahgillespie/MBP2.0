@@ -20,7 +20,7 @@ public class Cart extends Inventory {
 		
 		ArrayList<Product> cart = new ArrayList<Product>();
 		
-		BigDecimal item1 = new BigDecimal(20);
+		BigDecimal item1 = new BigDecimal(15);
 		BigDecimal item2 = new BigDecimal(15);
 		BigDecimal item3 = new BigDecimal(4);
 		BigDecimal item4 = new BigDecimal(11);
