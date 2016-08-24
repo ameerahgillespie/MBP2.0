@@ -11,11 +11,11 @@ public class PosTerminalApp {
 
 	public static void main(String[] args) throws IOException {
 		Scanner scan = new Scanner (System.in);
-		//Inventory inventory = new Inventory();
+		Inventory inventory = new Inventory();
 	
 		//Welcome! Who do I have the pleasure 
 		//print inventory
-		//System.out.println(inventory);
+		System.out.println(inventory);
 		//We want it to ask the user to pick an item
 		System.out.println("Please select your item of choice.");
 		//Then we want the user to enter the item they picked

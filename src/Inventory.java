@@ -49,16 +49,17 @@ public class Inventory extends FileReaderWriter{
 	public String toString() {
 		String ret = "";
 
+		String formattedString = "";
 		for (int x = 0; x < productList.size(); x++) {
 			Product currentProduct = productList.get(x);
 			String name = currentProduct.getName();
 			String Description = currentProduct.getDescription();
 			String category = currentProduct.getCategory();
 			String price = currentProduct.getPrice();
-			String formattedString = String.format("%-20s %-20s %-20s %-20s", name, Description, category,price);
-			ret += (x + 1);
+			formattedString += String.format("%2d. %-25s %-25s %-20s %-20s\n", (x+1), name, Description, category,price);
+			
 		}
 
-		return ret;
+		return formattedString;
 	}
 }
