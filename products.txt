@@ -1,9 +1,10 @@
-Laptop
-Desktop
-Phone
-Camera
-Hard Disk Drive
-Solid State Hard Drive
-Keyboard
-Mouse
-Battery Charger
+Item Name	Description	Category	Price
+Laptop 	Portable computer	 Tech	999.99
+Desktop 	Home or office computer	 Tech	1499.99
+Cell Phone	Portable phone	 Tech	499.99
+Camera	 Camera	 Tech	300
+Hard Disk Drive	Storage for Computer	 Tech	450.99
+Solid State Hard Drive	Storage for Computer	 Tech	649.99
+Keyboard	 Typing interface	 Tech	49.99
+Mouse	Pointing interface	 Tech	39.99
+Battery Charger	Chargin source	 Tech	29.99

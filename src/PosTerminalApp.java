@@ -1,9 +1,9 @@
-
+import java.math.BigDecimal;
 import java.io.IOException;
-import java.util.Scanner; 
+import java.util.ArrayList;
+import java.util.Scanner;
 
-
-public class PosTerminalApp extends Inventory {
+public class PosTerminalApp {
 	public PosTerminalApp() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
@@ -11,11 +11,11 @@ public class PosTerminalApp extends Inventory {
 
 	public static void main(String[] args) throws IOException {
 		Scanner scan = new Scanner (System.in);
-		Inventory inventory = new Inventory();
+		//Inventory inventory = new Inventory();
 	
 		//Welcome! Who do I have the pleasure 
 		//print inventory
-		System.out.println(inventory);
+		//System.out.println(inventory);
 		//We want it to ask the user to pick an item
 		System.out.println("Please select your item of choice.");
 		//Then we want the user to enter the item they picked
@@ -32,18 +32,26 @@ public class PosTerminalApp extends Inventory {
 				//if cash pull from cash
 		//if check pull from check
 		//if credit pull from credit
-	//	Payment.paymentType(scanstuffanswer);
-
-//		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
-//		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
-//		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
-//		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
-//		cart.add(meth);
-//		cart.add(anotherone);
-//		cart.add(anumber);
-//		System.out.println(Checkout.cartTotal(cart));
-
-		//Payment.paymentType(scanstuffanswer);
+		
+		//vvv pseudo cart for example vvv
+		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
+		//vvv pseudo cart items for example vvv
+		cart.add(meth);
+		cart.add(anotherone);
+		cart.add(anumber);
+		
+		//vvv print math totals for the entire array vvv
+		System.out.println(Checkout.cartSubtotal(cart));
+		System.out.println(Checkout.cartTax(cart));
+		System.out.println(Checkout.cartTotal(cart));	
+		// vvv print array contents vvv
+		for (BigDecimal number : cart) {
+			   System.out.println("Number = " + number);
+			   }
+			//Payment.paymentType(scanstuffanswer);
 		
 //		System.out.println(Checkout.cartTotal(cart));
 		//Payment.paymentType(scanAnswer); <<<<<DO NOT REMOVE
