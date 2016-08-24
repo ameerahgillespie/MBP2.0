@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class PosTerminalApp extends Inventory {
+public class PosTerminalApp extends Cart {
 	private static int paymentType;
 
 	public PosTerminalApp() throws IOException {
@@ -32,8 +32,8 @@ public class PosTerminalApp extends Inventory {
 		do {
 
 			// print inventory
-			printInventory();
 
+			System.out.println(inventory);
 			// read a line of text from the user.
 			// That gets stored in the String input.
 			// Then firstChar is the first character of input converted to
@@ -45,6 +45,7 @@ public class PosTerminalApp extends Inventory {
 
 			System.out.println("Please select your item of choice.");
 			// add extra options
+			addToCart();
 			//give three options from list (or)
 			//
 			System.out.println("C to check out. E to empty your cart.");
@@ -121,21 +122,24 @@ public class PosTerminalApp extends Inventory {
 		//if y print to console items purchased
 //		
 		//vvv pseudo cart for example vvv
-		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		ArrayList<BigDecimal> cart1 = new ArrayList<BigDecimal>();
 		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
 		//vvv pseudo cart items for example vvv
-		cart.add(meth);
-		cart.add(anotherone);
-		cart.add(anumber);
+		cart1.add(meth);
+		cart1.add(anotherone);
+		cart1.add(anumber);
 		
 		//vvv print math totals for the entire array vvv
-		System.out.println(Checkout.cartSubtotal(cart));
-		System.out.println(Checkout.cartTax(cart));
-		System.out.println(Checkout.cartTotal(cart));	
+		System.out.println(Checkout.cartSubtotal(cart1));
+		System.out.println(Checkout.cartTax(cart1));
+		System.out.println(Checkout.cartTotal(cart1));	
 		// vvv print array contents vvv
-		
+		for (BigDecimal number : cart1) {
+			   System.out.println("Number = " + number);
+			   }
+
 			//Payment.paymentType(scanstuffanswer);
 		
 //		System.out.println(Checkout.cartTotal(cart));
