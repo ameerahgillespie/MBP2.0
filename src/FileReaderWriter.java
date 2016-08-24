@@ -52,8 +52,5 @@ public class FileReaderWriter {
 			System.out.println(e);
 		}
 		
-//		for (Product product : productsList ) {
-//			System.out.println(product + "this is the arraylist");
-//		}
 	}
 }

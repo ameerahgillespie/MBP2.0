@@ -30,4 +30,11 @@ public static ArrayList<BigDecimal> removeItem(ArrayList<BigDecimal> array, int 
 	array.remove(arraySpot);
 	return array;
 }
+public static ArrayList<BigDecimal> printReceipt(ArrayList<BigDecimal> array){
+	for (BigDecimal number : array) {
+		   System.out.println("This item is: $" + number );
+		   }
+	System.out.println("And your total is: $" + cartTotal(array));
+	return null;
+}
 }

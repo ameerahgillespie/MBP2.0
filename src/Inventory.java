@@ -7,7 +7,6 @@ import java.util.ArrayList;
 
 public class Inventory extends FileReaderWriter{
 
-//	private static final String FIELD_SEP = "/t";
 	protected static ArrayList<Product> productList;
 
 	public Inventory() throws IOException {
@@ -30,14 +29,11 @@ public class Inventory extends FileReaderWriter{
 				product.setPrice(price);
 				productList.add(product);
 				line = in.readLine();
-//				System.out.println(name + description + Category + price);
-//				System.out.println(line + " this is the array list");
 
 
 			}
 			in.close();
 		} catch (FileNotFoundException e) {
-			// TODO: handle exception
 			System.out.println("Error \t%s" + e);
 		} 
 	}
@@ -47,8 +43,6 @@ public class Inventory extends FileReaderWriter{
 	}
 
 	public String toString() {
-		String ret = "";
-
 		String formattedString = "";
 		for (int x = 0; x < productList.size(); x++) {
 			Product currentProduct = productList.get(x);

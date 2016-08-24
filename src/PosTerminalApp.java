@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class PosTerminalApp extends Inventory {
+public class PosTerminalApp extends Cart {
 	private static int paymentType;
 
 	public PosTerminalApp() throws IOException {
@@ -32,27 +32,34 @@ public class PosTerminalApp extends Inventory {
 		do {
 
 			// print inventory
-			printInventory();
 
-			// read a line of text from the user.
-			// That gets stored in the String input.
-			// Then firstChar is the first character of input converted to
-			// uppercase.
-			// The idea is to check for E or C
-			// so the user can enter numbers for the items
-			// or E to empty the cart
-			// make shopping cart
-
-			System.out.println("Please select your item of choice.");
-			// add extra options
+			String myscan = null;
+			do {
+				System.out.println(inventory);
+				// read a line of text from the user.
+				// That gets stored in the String input.
+				// Then firstChar is the first character of input converted to
+				// uppercase.
+				// The idea is to check for E or C
+				// so the user can enter numbers for the items
+				// or E to empty the cart
+				// make shopping cart
+				//			System.out.println("Please select your item of choice.");
+				// add extra options
+				addToCart();
+				System.out.println("Would you like to continue shopping? (y/n)");
+				myscan = scan.nextLine();
+			} while (myscan.equalsIgnoreCase("y"));
+				System.out.println(getCart());
+			
 			//give three options from list (or)
 			//
 			System.out.println("C to check out. E to empty your cart.");
 			String input = scan.nextLine();
-			String firstChar = input.substring(0, 1).toUpperCase();
-			if (firstChar.equals("C")) {
+			char firstChar = input.charAt(0);
+			if (firstChar == ('C')) {
 				orderIncomplete = false;
-			} else if (firstChar.equals("E")) {
+			} else if (firstChar == ('E')) {
 				// cart - new int[numProducts];
 			} else {
 				// make sure the input was a valid number from 1 to numProducts
@@ -121,11 +128,16 @@ public class PosTerminalApp extends Inventory {
 		//if y print to console items purchased
 //		
 		//vvv pseudo cart for example vvv
+<<<<<<< HEAD
 		ArrayList<BigDecimal> checkoutExample = new ArrayList<BigDecimal>();
+=======
+		ArrayList<BigDecimal> cart1 = new ArrayList<BigDecimal>();
+>>>>>>> 1314b4084a7007ce0126fb2c1e20433a8ee137e0
 		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
 		//vvv pseudo cart items for example vvv
+<<<<<<< HEAD
 		checkoutExample.add(meth);
 		checkoutExample.add(anotherone);
 		checkoutExample.add(anumber);
@@ -136,8 +148,21 @@ public class PosTerminalApp extends Inventory {
 		System.out.println(Checkout.cartTotal(checkoutExample));	
 		// vvv print array contents vvv
 		for (BigDecimal number : checkoutExample) {
+=======
+		cart1.add(meth);
+		cart1.add(anotherone);
+		cart1.add(anumber);
+		
+		//vvv print math totals for the entire array vvv
+		System.out.println(Checkout.cartSubtotal(cart1));
+		System.out.println(Checkout.cartTax(cart1));
+		System.out.println(Checkout.cartTotal(cart1));	
+		// vvv print array contents vvv
+		for (BigDecimal number : cart1) {
+>>>>>>> 1314b4084a7007ce0126fb2c1e20433a8ee137e0
 			   System.out.println("Number = " + number);
 			   }
+
 			//Payment.paymentType(scanstuffanswer);
 		
 //		System.out.println(Checkout.cartTotal(cart));
@@ -145,9 +170,15 @@ public class PosTerminalApp extends Inventory {
 		
 		
 		//Tell them their items will arrive in 4-7 business days (more like 7).
+//		Checkout.printReceipt(cart);
 		System.out.println("bye felicia.");
 		//Tell them thanks for shopping and come again!
-		switchfobrainz.getCart(3);
+
+
+		
+
+//		switchfobrainz.getCart(3);
+
 		scan.close();
 
 	}
