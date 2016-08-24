@@ -63,3 +63,12 @@ public class Inventory extends FileReaderWriter{
 		return formattedString;
 	}
 }
+
+// need to change inventory
+//cart needs to store products with their quantities
+//inventory has our products in it
+//when user selects which product they would like to purchase 
+//we need the inventory to give us the product that maps to the number they select
+//need function that maps numbers selected to products
+
+

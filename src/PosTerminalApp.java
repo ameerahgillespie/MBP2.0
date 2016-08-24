@@ -121,21 +121,21 @@ public class PosTerminalApp extends Inventory {
 		//if y print to console items purchased
 //		
 		//vvv pseudo cart for example vvv
-		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		ArrayList<BigDecimal> checkoutExample = new ArrayList<BigDecimal>();
 		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
 		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
 		//vvv pseudo cart items for example vvv
-		cart.add(meth);
-		cart.add(anotherone);
-		cart.add(anumber);
+		checkoutExample.add(meth);
+		checkoutExample.add(anotherone);
+		checkoutExample.add(anumber);
 		
 		//vvv print math totals for the entire array vvv
-		System.out.println(Checkout.cartSubtotal(cart));
-		System.out.println(Checkout.cartTax(cart));
-		System.out.println(Checkout.cartTotal(cart));	
+		System.out.println(Checkout.cartSubtotal(checkoutExample));
+		System.out.println(Checkout.cartTax(checkoutExample));
+		System.out.println(Checkout.cartTotal(checkoutExample));	
 		// vvv print array contents vvv
-		for (BigDecimal number : cart) {
+		for (BigDecimal number : checkoutExample) {
 			   System.out.println("Number = " + number);
 			   }
 			//Payment.paymentType(scanstuffanswer);
