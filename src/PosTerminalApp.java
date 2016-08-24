@@ -1,17 +1,27 @@
 
+<<<<<<< HEAD
 import java.math.BigDecimal;
+=======
+import java.io.IOException;
+>>>>>>> a6fcd650ee0aea5bb5511adb186fa7459f56762f
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PosTerminalApp extends FileReaderWriter {
-	public static void main(String[] args) {
+public class PosTerminalApp extends Inventory {
+	public PosTerminalApp() throws IOException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) throws IOException {
 		Scanner scan = new Scanner (System.in);
 		Inventory inventory = new Inventory();
-
+//		fileReader();
+//		getProducts();
 	
 		//Welcome! Who do I have the pleasure 
 		//print inventory
-	//	System.out.println(inventory);
+		System.out.println(inventory);
 		//We want it to ask the user to pick an item
 		System.out.println("Please select your item of choice.");
 		//Then we want the user to enter the item they picked
@@ -28,14 +38,19 @@ public class PosTerminalApp extends FileReaderWriter {
 				//if cash pull from cash
 		//if check pull from check
 		//if credit pull from credit
-		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
-		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
-		cart.add(meth);
-		cart.add(anotherone);
-		cart.add(anumber);
-		System.out.println(Checkout.cartTotal(cart));
+
+//		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+//		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
+//		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
+//		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
+//		cart.add(meth);
+//		cart.add(anotherone);
+//		cart.add(anumber);
+//		System.out.println(Checkout.cartTotal(cart));
+
+		//Payment.paymentType(scanstuffanswer);
+		
+//		System.out.println(Checkout.cartTotal(cart));
 		//Payment.paymentType(scanAnswer); <<<<<DO NOT REMOVE
 		
 		
@@ -46,5 +61,7 @@ public class PosTerminalApp extends FileReaderWriter {
 		
 		scan.close();
 	}
+
+	
 	
 }
