@@ -2,7 +2,7 @@ public class Product {
     private String name;
     private String description;
     private String category;
-    private double price;
+    private String price;
     
 //    public Product(Scanner file) {
 //        name = file.nextLine();
@@ -11,7 +11,7 @@ public class Product {
 //        price = Double.parseDouble(file.nextLine());
 //    }
     
-    public Product(String name, String description, String category, double price) {
+    public Product(String name, String description, String category, String price) {
         this.name = name;   
         this.description = description;
         this.category = category;
@@ -31,12 +31,23 @@ public class Product {
 		this.category = category;
 	}
 
-	public double getPrice() {
+	public String getDescription() {
+		return description;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		this.price = price;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
     
     public String toString() {

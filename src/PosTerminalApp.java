@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -43,6 +45,8 @@ public class PosTerminalApp extends Inventory {
 
 			System.out.println("Please select your item of choice.");
 			// add extra options
+			//give three options from list (or)
+			//
 			System.out.println("C to check out. E to empty your cart.");
 			String input = scan.nextLine();
 			String firstChar = input.substring(0, 1).toUpperCase();
@@ -87,6 +91,65 @@ public class PosTerminalApp extends Inventory {
 			System.out.println("Nothing this time? Have a nice day.");
 			scan.close();
 		}
+
+	
+//		//Welcome! Who do I have the pleasure 
+//		
+		//pick a category first and give them options from TECH, HAIR, ACCESORIES, etc etc.  - only tech will work
+		//print inventory
+//		System.out.println(inventory); - tech list will pop up 1-10 list from the inventory class
+//		//We want it to ask the user to pick an item by number from the list
+		
+//		System.out.println("Please select your item of choice."
+		
+//		
+//		System.out.println("scanner.nextln");
+//		//do you want to add? y/n
+		
+//		System.out.println("Would you like to continue shopping? yes or no"); if yes do loop 
+//		//if n then pull all items picked in shopping cart and it should list items they have in shopping cart
+//		System.out.println("scanner.nextln");
+//		//get total price  - get from ben 
+//		System.out.println("get total price");
+//		//when finished ask payment method from user - cash, check or credit payment
+//		System.out.println("cash check or creeeedit?");
+//		System.out.println("scanner.nextln");
+//				//if cash pull from cash
+//		//if check pull from check
+//		//if credit pull from credit
+		//after payment successful ask if they would like a reciept
+		//if y print to console items purchased
+//		
+		//vvv pseudo cart for example vvv
+		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
+		//vvv pseudo cart items for example vvv
+		cart.add(meth);
+		cart.add(anotherone);
+		cart.add(anumber);
+		
+		//vvv print math totals for the entire array vvv
+		System.out.println(Checkout.cartSubtotal(cart));
+		System.out.println(Checkout.cartTax(cart));
+		System.out.println(Checkout.cartTotal(cart));	
+		// vvv print array contents vvv
+		for (BigDecimal number : cart) {
+			   System.out.println("Number = " + number);
+			   }
+			//Payment.paymentType(scanstuffanswer);
+		
+//		System.out.println(Checkout.cartTotal(cart));
+		//Payment.paymentType(scanAnswer); <<<<<DO NOT REMOVE
+		
+		
+		//Tell them their items will arrive in 4-7 business days (more like 7).
+		System.out.println("bye felicia.");
+		//Tell them thanks for shopping and come again!
+		switchfobrainz.getCart(3);
+		scan.close();
+
 	}
 
 	private static void printInventory() {

@@ -7,19 +7,30 @@ import java.util.ArrayList;
 
 public class Inventory extends FileReaderWriter{
 
+//	private static final String FIELD_SEP = "/t";
 	protected static ArrayList<Product> productList;
 
 	public Inventory() throws IOException {
+		productList = new ArrayList<Product>();
 		try {
 			BufferedReader in = new BufferedReader(
 									new FileReader(productsFile));
-			productList = new ArrayList<Product>();
-			String line;
-			
-			while((line = in.readLine()) != null){
-//				line = in.readLine();
-				Product product = new Product(line);
+			String line = in.readLine(); //read and discard row header
+			 line = in.readLine(); //read the first line
+			while(line  != null){
+				String[] columns = line.split("\t");
+				String name = columns[0];
+				String description = columns[1];
+				String category = columns[2];
+				String price = columns[3];
+				Product product = new Product(name, description, category, price);
+				product.setName(name);
+				product.setDescription(description);
+				product.setCategory(category);
+				product.setPrice(price);
 				productList.add(product);
+				line = in.readLine();
+//				System.out.println(name + description + Category + price);
 //				System.out.println(line + " this is the array list");
 
 
@@ -29,13 +40,6 @@ public class Inventory extends FileReaderWriter{
 			// TODO: handle exception
 			System.out.println("Error \t%s" + e);
 		} 
-//		for (Product product: productList) {
-//		    productList.add(new Product("name"+ product, "description"+product, "category"+product, 0));
-//		    StringBuilder stringBuilder = new StringBuilder();
-//			stringBuilder.append(product);
-//			stringBuilder.append("This is the array list");
-//			System.out.println(product.toString());
-//		}
 	}
 
 	public static ArrayList<Product> getProducts() {
@@ -45,13 +49,17 @@ public class Inventory extends FileReaderWriter{
 	public String toString() {
 		String ret = "";
 
+		String formattedString = "";
 		for (int x = 0; x < productList.size(); x++) {
 			Product currentProduct = productList.get(x);
 			String name = currentProduct.getName();
-
-			ret += (x + 1) + ". " + name + "\n";
+			String Description = currentProduct.getDescription();
+			String category = currentProduct.getCategory();
+			String price = currentProduct.getPrice();
+			formattedString += String.format("%2d. %-25s %-25s %-20s %-20s\n", (x+1), name, Description, category,price);
+			
 		}
 
-		return ret;
+		return formattedString;
 	}
 }
