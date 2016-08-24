@@ -12,8 +12,6 @@ public class PosTerminalApp extends Inventory {
 	public static void main(String[] args) throws IOException {
 		Scanner scan = new Scanner (System.in);
 		Inventory inventory = new Inventory();
-//		fileReader();
-//		getProducts();
 	
 		//Welcome! Who do I have the pleasure 
 		//print inventory
