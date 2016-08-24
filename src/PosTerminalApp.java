@@ -33,27 +33,35 @@ public class PosTerminalApp extends Cart {
 
 			// print inventory
 
-			System.out.println(inventory);
-			// read a line of text from the user.
-			// That gets stored in the String input.
-			// Then firstChar is the first character of input converted to
-			// uppercase.
-			// The idea is to check for E or C
-			// so the user can enter numbers for the items
-			// or E to empty the cart
-			// make shopping cart
-
-			System.out.println("Please select your item of choice.");
-			// add extra options
-			addToCart();
+			String myscan = null;
+			do {
+				System.out.println(inventory);
+				// read a line of text from the user.
+				// That gets stored in the String input.
+				// Then firstChar is the first character of input converted to
+				// uppercase.
+				// The idea is to check for E or C
+				// so the user can enter numbers for the items
+				// or E to empty the cart
+				// make shopping cart
+				//			System.out.println("Please select your item of choice.");
+				// add extra options
+				addToCart();
+				myscan = scan.nextLine();
+			} while (myscan.equalsIgnoreCase("y"));
+			System.out.println("see cart type n");
+			if (scan.next().equalsIgnoreCase("n")){
+				System.out.println(getCart());
+			}
+			
 			//give three options from list (or)
 			//
 			System.out.println("C to check out. E to empty your cart.");
 			String input = scan.nextLine();
-			String firstChar = input.substring(0, 1).toUpperCase();
-			if (firstChar.equals("C")) {
+			char firstChar = input.charAt(0);
+			if (firstChar == ('C')) {
 				orderIncomplete = false;
-			} else if (firstChar.equals("E")) {
+			} else if (firstChar == ('E')) {
 				// cart - new int[numProducts];
 			} else {
 				// make sure the input was a valid number from 1 to numProducts
