@@ -1,9 +1,10 @@
+
 import java.math.BigDecimal;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PosTerminalApp extends Inventory {
+public class PosTerminalApp {
 	public PosTerminalApp() throws IOException {
 		super();
 		// TODO Auto-generated constructor stub
@@ -12,8 +13,6 @@ public class PosTerminalApp extends Inventory {
 	public static void main(String[] args) throws IOException {
 		Scanner scan = new Scanner (System.in);
 		Inventory inventory = new Inventory();
-//		fileReader();
-//		getProducts();
 	
 		//Welcome! Who do I have the pleasure 
 		//print inventory
@@ -54,8 +53,7 @@ public class PosTerminalApp extends Inventory {
 		for (BigDecimal number : cart) {
 			   System.out.println("Number = " + number);
 			   }
-			   
-		//Payment.paymentType(scanstuffanswer);
+			//Payment.paymentType(scanstuffanswer);
 		
 //		System.out.println(Checkout.cartTotal(cart));
 		//Payment.paymentType(scanAnswer); <<<<<DO NOT REMOVE
