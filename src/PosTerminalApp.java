@@ -1,4 +1,5 @@
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -27,12 +28,16 @@ public class PosTerminalApp extends FileReaderWriter {
 				//if cash pull from cash
 		//if check pull from check
 		//if credit pull from credit
-		ArrayList<Double> cart = new ArrayList<Double>();
-		cart.add(4.0);
-		cart.add(6.0);
-		cart.add(3.30);
+		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
+		cart.add(meth);
+		cart.add(anotherone);
+		cart.add(anumber);
 		System.out.println(Checkout.cartTotal(cart));
 		//Payment.paymentType(scanAnswer); <<<<<DO NOT REMOVE
+		
 		
 		//Tell them their items will arrive in 4-7 business days (more like 7).
 		System.out.println("bye felicia.");
