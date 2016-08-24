@@ -16,3 +16,7 @@ log/
 target/
 
 *.class
+
+bin1/
+
+bin/
