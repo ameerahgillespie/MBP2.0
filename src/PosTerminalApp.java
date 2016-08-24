@@ -1,9 +1,5 @@
-
-<<<<<<< HEAD
 import java.math.BigDecimal;
-=======
 import java.io.IOException;
->>>>>>> a6fcd650ee0aea5bb5511adb186fa7459f56762f
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -39,15 +35,16 @@ public class PosTerminalApp extends Inventory {
 		//if check pull from check
 		//if credit pull from credit
 
-//		ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
-//		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
-//		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
-//		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
-//		cart.add(meth);
-//		cart.add(anotherone);
-//		cart.add(anumber);
-//		System.out.println(Checkout.cartTotal(cart));
-
+	ArrayList<BigDecimal> cart = new ArrayList<BigDecimal>();
+		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
+		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
+		cart.add(meth);
+		cart.add(anotherone);
+		cart.add(anumber);
+		System.out.println(Checkout.cartSubtotal(cart));
+		System.out.println(Checkout.cartTax(cart));
+		System.out.println(Checkout.cartTotal(cart));
 		//Payment.paymentType(scanstuffanswer);
 		
 //		System.out.println(Checkout.cartTotal(cart));
