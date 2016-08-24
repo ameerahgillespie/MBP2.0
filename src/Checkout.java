@@ -26,4 +26,8 @@ public static BigDecimal cartTotal(ArrayList<BigDecimal> num){
 	BigDecimal cartTotal = subTotal.add(taxAmount);
 	return cartTotal.setScale(2, BigDecimal.ROUND_HALF_UP);
 }
+public static ArrayList<BigDecimal> removeItem(ArrayList<BigDecimal> array, int arraySpot){
+	array.remove(arraySpot);
+	return array;
+}
 }
