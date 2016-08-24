@@ -147,6 +147,7 @@ public class PosTerminalApp extends Cart {
 		for (BigDecimal number : cart1) {
 			   System.out.println("Number = " + number);
 			   }
+
 			//Payment.paymentType(scanstuffanswer);
 		
 //		System.out.println(Checkout.cartTotal(cart));
@@ -154,9 +155,15 @@ public class PosTerminalApp extends Cart {
 		
 		
 		//Tell them their items will arrive in 4-7 business days (more like 7).
+//		Checkout.printReceipt(cart);
 		System.out.println("bye felicia.");
 		//Tell them thanks for shopping and come again!
+
+
+		
+
 //		switchfobrainz.getCart(3);
+
 		scan.close();
 
 	}
