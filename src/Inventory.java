@@ -20,7 +20,7 @@ public class Inventory extends FileReaderWriter{
 				line = in.readLine();
 				Product product = new Product(line);
 				productList.add(product);
-				System.out.println(line + " this is the array list");
+//				System.out.println(line + " this is the array list");
 
 
 			}
