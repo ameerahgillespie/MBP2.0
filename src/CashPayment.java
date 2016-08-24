@@ -1,10 +1,10 @@
 public class CashPayment extends Payment {
-  public CashPayment(){
+	public CashPayment() {
 
 	}
 
-	@Override 
-	public String paymentDetails(){
+	@Override
+	public String paymentDetails() {
 		return "This cash amount is" + amount;
 	}
 }
