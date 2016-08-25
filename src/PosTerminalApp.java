@@ -48,7 +48,7 @@ public class PosTerminalApp extends Cart {
 				System.out.println("Would you like to continue shopping? (y/n)");
 //				myscan = scan.nextLine();
 			} while (scan.nextLine().equalsIgnoreCase("y"));
-				System.out.println(getCart() + getCartTotal());
+				System.out.println(getCart());
 				System.out.println(getCartTotal());
 			//give three options from list (or)
 			//
