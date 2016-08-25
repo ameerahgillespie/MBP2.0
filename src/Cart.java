@@ -1,23 +1,5 @@
-<<<<<<< HEAD
-import java.util.ArrayList;
 
-public class Cart {
-	private ArrayList<Product> products;
-	private ArrayList<Integer> quantities;
-	
-	public Cart() {
-		products = new ArrayList<Product>();
-		quantities = new ArrayList<Integer>();
-	}
-	
-	public void addToCard(Product product, int quantity) {
-		products.add(product);
-		quantities.add(quantity);
-	}
-}
-=======
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -38,6 +20,7 @@ public class Cart extends Inventory {
 		cart.add(productList.get(Mychoice - 1));
 		System.out.println(cart);
 
+//		scan.close();
 		return cart;
 	}
 
@@ -57,6 +40,18 @@ public class Cart extends Inventory {
 		return myItems.toString();
 	
 
-	} 
+	}
+	
+	public static Double getCartTotal() {
+		String cartPrice = "";
+		Double totalPrice = (double) 0;
+		for (Product items : cart) {
+//			items.getPrice(); 
+			totalPrice += Double.parseDouble(items.getPrice());
+		
+			 
+		}
+//			totalPrice += cartPrice;
+		return totalPrice;
+	}
 }
->>>>>>> 1314b4084a7007ce0126fb2c1e20433a8ee137e0

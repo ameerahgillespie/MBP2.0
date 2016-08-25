@@ -1,10 +1,8 @@
-import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.io.IOException;
 import java.util.Scanner;
 
 public class PosTerminalApp extends Cart {
-	private static int paymentType;
+//	private static int paymentType;
 
 	public PosTerminalApp() throws IOException {
 		super();
@@ -33,7 +31,7 @@ public class PosTerminalApp extends Cart {
 
 			// print inventory
 
-			String myscan = null;
+//			String myscan = null;
 			do {
 				System.out.println(inventory);
 				// read a line of text from the user.
@@ -48,10 +46,10 @@ public class PosTerminalApp extends Cart {
 				// add extra options
 				addToCart();
 				System.out.println("Would you like to continue shopping? (y/n)");
-				myscan = scan.nextLine();
-			} while (myscan.equalsIgnoreCase("y"));
-				System.out.println(getCart());
-			
+//				myscan = scan.nextLine();
+			} while (scan.nextLine().equalsIgnoreCase("y"));
+				System.out.println(getCart() + getCartTotal());
+				System.out.println(getCartTotal());
 			//give three options from list (or)
 			//
 			System.out.println("C to check out. E to empty your cart.");
@@ -92,7 +90,7 @@ public class PosTerminalApp extends Cart {
 
 			// choose the payment type
 			System.out.println("(1)Cash (2)Check (3)Credit/Debit?");
-			setPaymentType(Integer.parseInt(scan.nextLine()));
+//			setPaymentType(Integer.parseInt(scan.nextLine()));
 
 		} else { // no items in cart
 			System.out.println("Nothing this time? Have a nice day.");
@@ -127,41 +125,7 @@ public class PosTerminalApp extends Cart {
 		//after payment successful ask if they would like a reciept
 		//if y print to console items purchased
 //		
-		//vvv pseudo cart for example vvv
-<<<<<<< HEAD
-		ArrayList<BigDecimal> checkoutExample = new ArrayList<BigDecimal>();
-=======
-		ArrayList<BigDecimal> cart1 = new ArrayList<BigDecimal>();
->>>>>>> 1314b4084a7007ce0126fb2c1e20433a8ee137e0
-		BigDecimal anumber= new BigDecimal (12.00).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal anotherone = new BigDecimal (8.50).setScale(2, BigDecimal.ROUND_HALF_UP);
-		BigDecimal meth = new BigDecimal (0.55).setScale(2, BigDecimal.ROUND_HALF_UP);
-		//vvv pseudo cart items for example vvv
-<<<<<<< HEAD
-		checkoutExample.add(meth);
-		checkoutExample.add(anotherone);
-		checkoutExample.add(anumber);
-		
-		//vvv print math totals for the entire array vvv
-		System.out.println(Checkout.cartSubtotal(checkoutExample));
-		System.out.println(Checkout.cartTax(checkoutExample));
-		System.out.println(Checkout.cartTotal(checkoutExample));	
-		// vvv print array contents vvv
-		for (BigDecimal number : checkoutExample) {
-=======
-		cart1.add(meth);
-		cart1.add(anotherone);
-		cart1.add(anumber);
-		
-		//vvv print math totals for the entire array vvv
-		System.out.println(Checkout.cartSubtotal(cart1));
-		System.out.println(Checkout.cartTax(cart1));
-		System.out.println(Checkout.cartTotal(cart1));	
-		// vvv print array contents vvv
-		for (BigDecimal number : cart1) {
->>>>>>> 1314b4084a7007ce0126fb2c1e20433a8ee137e0
-			   System.out.println("Number = " + number);
-			   }
+
 
 			//Payment.paymentType(scanstuffanswer);
 		
@@ -182,20 +146,21 @@ public class PosTerminalApp extends Cart {
 		scan.close();
 
 	}
-
-	private static void printInventory() {
-		// TODO Auto-generated method stub
-
-	}
-
-	public static int getPaymentType() {
-		return paymentType;
-	}
-
-	public static void setPaymentType(int paymentType) {
-		PosTerminalApp.paymentType = paymentType;
-	}
 }
+
+//	private static void printInventory() {
+//		// TODO Auto-generated method stub
+//
+//	}
+//
+//	public static int getPaymentType() {
+//		return paymentType;
+//	}
+//
+//	public static void setPaymentType(int paymentType) {
+//		PosTerminalApp.paymentType = paymentType;
+//	}
+//}
 
 // //Welcome! Who do I have the pleasure
 // //print inventory
