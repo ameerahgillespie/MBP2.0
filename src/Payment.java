@@ -1,12 +1,11 @@
-public class Payment {
+import java.util.Scanner;
+
+public abstract class Payment {
 	protected double amount;
+	protected Scanner scan;
 
 	public Payment() {
-		this.amount = 0;
-	}
 
-	public Payment(double amount) {
-		this.amount = amount;
 	}
 
 	public double getAmount() {
@@ -16,8 +15,6 @@ public class Payment {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-
-	public String paymentDetails() {
-		return "This amount is " + amount;
-	}
+	
+	public abstract void processPayment(Scanner scan, double total);
 }

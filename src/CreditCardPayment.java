@@ -1,12 +1,26 @@
-public class CreditCardPayment extends Payment {
-	private String cardName;
+import java.util.Scanner;
 
-	public String getCardName() {
-		return cardName;
+public class CreditCardPayment extends Payment {
+	private String creditCardNum;
+	private String expireDate;
+	private String cvv;
+
+	public CreditCardPayment() {
+
 	}
 
-	public void setCardName(String cardName) {
-		this.cardName = cardName;
+	public CreditCardPayment(String creditCardNum, String expireDate, String cvv) {
+		this.creditCardNum = creditCardNum;
+		this.expireDate = expireDate;
+		this.cvv = cvv;
+	}
+
+	public String getCVV() {
+		return cvv;
+	}
+
+	public void setCVV(String cvv) {
+		this.cvv = cvv;
 	}
 
 	public String getExpireDate() {
@@ -25,30 +39,24 @@ public class CreditCardPayment extends Payment {
 		this.creditCardNum = creditCardNum;
 	}
 
-	private String expireDate;
-	private String creditCardNum;
-
-	public CreditCardPayment() {
-		this.cardName = "No card name";
-		this.expireDate = "No expire date";
-		this.creditCardNum = "No credit card number";
+	@Override
+	public void processPayment(Scanner scan, double total) {
+		System.out.print("Enter credit card number: ");
+		creditCardNum = scan.nextLine();
+		System.out.print("Enter credit card expiration date: ");
+		expireDate = scan.nextLine();
+		System.out.print("Enter credit card cvv: ");
+		cvv = scan.nextLine();
 	}
-
-	public CreditCardPayment(String cardName, String expireDate, String creditCardNum) {
-		this.cardName = cardName;
-		this.expireDate = expireDate;
-		this.creditCardNum = creditCardNum;
-	}
-
-	public void setcardName(String cardName) {
-		this.cardName = cardName;
-	}
-
-	public void setexpireDate(String expireDate) {
-		this.expireDate = expireDate;
-	}
-
-	public void setcreditCardNum(String creditCardNum) {
-		this.creditCardNum = creditCardNum;
+	
+	@Override
+	public String toString() {
+		String ret = "";
+		
+		ret += "Credit card number: " + creditCardNum + "\n";
+		ret += "Credit card expiration date: " + expireDate + "\n";
+		ret += "Credit card cvv " + cvv;
+		
+		return ret;
 	}
 }
