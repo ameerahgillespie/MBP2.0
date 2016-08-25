@@ -43,15 +43,11 @@ public class Cart extends Inventory {
 	}
 	
 	public static Double getCartTotal() {
-		String cartPrice = "";
-		Double totalPrice = (double) 0;
+		Double totalPrice = 0.0;
 		for (Product items : cart) {
-//			items.getPrice(); 
 			totalPrice += Double.parseDouble(items.getPrice());
-		
 			 
 		}
-//			totalPrice += cartPrice;
 		return totalPrice;
 	}
 }
